@@ -1,0 +1,49 @@
+extends ../layout.pug
+block content
+    h1 Inscription 
+    if error
+        div.alert.alert-danger #{error}
+    form(action='/inscription' method="post")
+        .input-group.mb-3
+            .input-group-prepend
+                .input-group-text.d-none.d-lg-block 
+                    i.fa.fa-envelope 
+            input(type="email" class="form-control" placeholder="Email" name="email")     
+ 
+        .input-group.mb-3
+            .input-group-prepend
+                .input-group-text.d-none.d-lg-block 
+                    i.fa.fa-lock
+            input(type="password" class="form-control" placeholder="Mot de passe" name="password")
+ 
+        hr
+ 
+        .input-group.mb-3
+            .input-group-prepend
+                .input-group-text.d-none.d-lg-block 
+                    i.fa.fa-restroom
+            select(class="form-control" placeholder="Civilité" name="civility")
+                option(value="1") Monsieur
+                option(value="2") Madame
+ 
+        .input-group.mb-3
+            .input-group-prepend
+                .input-group-text.d-none.d-lg-block
+                    i.fa.fa-user
+            input(type="text" class="form-control" placeholder="Nom" name="lastname")
+ 
+        .input-group.mb-3
+            .input-group-prepend
+                .input-group-text.d-none.d-lg-block 
+                    i.fa.fa-user
+            input(type="text" class="form-control" placeholder="Prénom" name="firstname")
+ 
+        .input-group.mb-3
+            .input-group-prepend
+                .input-group-text.d-none.d-lg-block
+                    i.fa.fa-phone
+            input(type="phone" class="form-control" placeholder="Téléphone" name="phone") 
+ 
+        .row.justify-content-center
+            .col-2
+                button.btn.btn-primary(type="submit") Enregistrer

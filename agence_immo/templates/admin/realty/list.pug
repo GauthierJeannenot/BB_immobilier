@@ -1,0 +1,12 @@
+extends ../layout.pug
+block breadcrumb  
+    li
+        a(href='#')
+            em.fa.fa-home &nbsp;
+    li(class='active') Liste des biens
+        
+block content
+    .d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pt-3.pb-2.mb-3.border-bottom
+        h1.h2 Liste des biens
+        .btn-toolbar.mb-2.mb-md-0
+            a.btn.btn-small.btn-primary(href="/admin/realty/add") Ajouter un bien
